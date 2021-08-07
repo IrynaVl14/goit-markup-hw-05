@@ -51,8 +51,9 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="primary-button">Заказать услугу</button>
-            </div>            
+                <button type="button" class="primary-button " data-modal-open>Заказать услугу</button>
+            </div>
+                        
         </section>
         <!--особенности-->
         <section class="section">
@@ -105,9 +106,18 @@
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="work-list list">
-                    <li class="work-list-item"><img src="./images/box1.jpg" alt="разработка десктопных приложений" width="370"></li>
-                    <li class="work-list-item"><img src="./images/box2.jpg" alt="разработка мобильных приложений" width="370"></li>
-                    <li class="work-list-item"><img src="./images/box3.jpg" alt="дизайнерские решения" width="370"></li>
+                    <li class="work-list-item">
+                        <img src="./images/box1.jpg" alt="разработка десктопных приложений" width="370">
+                        <p class="work-list-text">Десктопные приложения</p>
+                    </li>
+                    <li class="work-list-item">
+                        <img src="./images/box2.jpg" alt="разработка мобильных приложений" width="370">
+                        <p class="work-list-text">Мобильные приложения</p>
+                    </li>
+                    <li class="work-list-item">
+                        <img src="./images/box3.jpg" alt="дизайнерские решения" width="370">
+                        <p class="work-list-text">Дизайнерские решения</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -310,7 +320,7 @@
                 </ul>
             </div>
         </section>
-
+        
         </main>
         <footer class="footer">
             <div class="container">
@@ -365,7 +375,17 @@
             
         </footer>
 
-    
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <div class="modal-close" data-modal-close>
+                    <svg width="30" height="30">
+                        <use href="./images/symbol-defs.svg#close"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/modal.js"></script>    
         
 </body>
 
