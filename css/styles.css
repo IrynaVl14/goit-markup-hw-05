@@ -356,16 +356,23 @@ a {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  padding: 27px 0;
-
-  font-weight: 700;
-  line-height: 1.14;
-  text-align: center;
-  text-transform: uppercase;
+  min-height: 70px;
 
   background: rgba(47, 48, 58, 0.8);
   color: var(--white-text-color);
+}
+
+.work-list-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 70px;
+
+  font-weight: 700;
+  line-height: 1.14;
+
+  text-transform: uppercase;
 }
 
 .section-title {
@@ -422,22 +429,15 @@ a {
   align-items: center;
   padding: 12px;
   fill: var(--company-logo-color);
+  border-radius: 50%;
 
-  transition: fill 250ms var(--primary-timing-function);
+  transition: fill 250ms var(--primary-timing-function),
+    background-color 250ms var(--primary-timing-function);
 }
 
 .member-social-icon:hover,
 .member-social-icon:focus {
   fill: var(--white-text-color);
-}
-.member-social-link {
-  border-radius: 50%;
-
-  transition: background-color 250ms var(--primary-timing-function);
-}
-
-.member-social-link:hover,
-.member-social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -537,7 +537,7 @@ a {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list-link:hover .portfolio-list-item-img::before {
+.portfolio-list-link:hover .portfolio-list-item-overlay {
   transform: translateY(0);
 }
 
@@ -547,10 +547,10 @@ a {
   overflow: hidden;
 }
 
-.portfolio-list-item-img::before {
+.portfolio-list-item-overlay {
   position: absolute;
-  display: inline-block;
-  content: "";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
@@ -567,19 +567,11 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
 
   font-size: 18px;
   line-height: 1.56;
 
   color: var(--white-text-color);
-
-  transition: opacity 250ms var(--primary-timing-function);
-}
-
-.portfolio-list-link:hover .portfolio-list-item-description,
-.portfolio-list-link:focus .portfolio-list-item-description {
-  opacity: 1;
 }
 
 /* footer */
